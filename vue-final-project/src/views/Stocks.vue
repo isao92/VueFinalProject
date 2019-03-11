@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>This is the views - Stocks</h1>
+    <div>Importing stocks from components/stocks/Stock.vue</div>
     <app-stock v-for="(stock, index) in stocks" :key="index" :stock="stock"></app-stock>
   </div>
 </template>

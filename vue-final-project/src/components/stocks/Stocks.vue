@@ -1,5 +1,5 @@
 <template>
-  <h1>This is the stocks - Stocks</h1>
+  <h1>This is the stocks/Stocks.vue</h1>
 </template>
 
 <script>

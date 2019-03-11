@@ -9,7 +9,7 @@ const mutations = {
     if (record) {
       record.quantity += quantity
     } else {
-      state.stocks.push ({
+      state.stocks.push({
         id: stockId,
         quantity: quantity
       })
@@ -19,7 +19,7 @@ const mutations = {
   'SELL_STOCK' (state, { stockId, quantity, stockPrice }) {
     const record = state.stocks.find(element => element.id === stockId)
     if (record) {
-      record.quantity += quantity
+      record.quantity -= quantity
     } else {
       state.stocks.splice(state.stocks.indexOf(record))
     }
@@ -38,7 +38,7 @@ const getters = {
       const record = getters.stocks.find(element => element.id === stock.id)
       return {
         id: stock.id,
-        quantity: stock.quanity,
+        quantity: stock.quantity,
         name: record.name,
         price: record.price
       }
