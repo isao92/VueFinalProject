@@ -1,0 +1,24 @@
+<template>
+  <div>
+    <h1>This is the views - Stocks</h1>
+    <app-stock v-for="(stock, index) in stocks" :key="index" :stock="stock"></app-stock>
+  </div>
+</template>
+
+<script>
+import Stock from '../components/stocks/Stock.vue'
+export default {
+  components: {
+    appStock: Stock
+  },
+  computed: {
+    stocks () {
+      return this.$store.getters.stocks
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
